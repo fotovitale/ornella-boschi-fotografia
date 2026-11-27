@@ -1,0 +1,7 @@
+# Referencias internas de diseño (no públicas)
+Info/
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
