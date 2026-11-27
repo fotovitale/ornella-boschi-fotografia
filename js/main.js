@@ -269,6 +269,9 @@
     const footerIg = document.getElementById("footer-instagram");
     const footerIgLabel = document.getElementById("footer-ig-label");
     const footerWa = document.getElementById("footer-whatsapp");
+    const footerWaLabel = document.getElementById("footer-wa-label");
+    const footerEmail = document.getElementById("footer-email");
+    const footerEmailLabel = document.getElementById("footer-email-label");
     const footerYear = document.getElementById("footer-year");
     const devWrap = document.getElementById("footer-dev");
 
@@ -301,6 +304,15 @@
     if (footerIgLabel && config.instagramHandle) footerIgLabel.textContent = config.instagramHandle;
     if (footerWa && config.about) {
       footerWa.href = buildWhatsAppUrl(config.about.whatsappMessage);
+    }
+    if (footerWaLabel && config.whatsappDisplay) {
+      footerWaLabel.textContent = config.whatsappDisplay;
+    }
+    if (footerEmail && config.email) {
+      footerEmail.href = `mailto:${config.email}`;
+    }
+    if (footerEmailLabel && config.email) {
+      footerEmailLabel.textContent = config.email;
     }
     if (footerYear) footerYear.textContent = String(new Date().getFullYear());
 

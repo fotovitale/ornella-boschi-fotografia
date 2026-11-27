@@ -19,17 +19,19 @@
  */
 
 window.SITE_CONFIG = {
-  // Número de WhatsApp de Ornella (formato internacional sin "+" ni espacios)
-  whatsappNumber: "5492634000000",
+  // Número real de WhatsApp de Ornella (+54 9 2634 41-0662 -> sin "+" ni espacios)
+  whatsappNumber: "5492634410662",
+  whatsappDisplay: "+54 9 2634 41-0662",
 
-  // Identidad de marca
+  // Identidad de marca y contacto real
   studioName: "Ornella Boschi",
   monogram: "OB",
   studioSubtitle: "Estudio de Fotografía",
-  stampText: "EST. MENDOZA · LUZ NATURAL · OFICIO ARTESANAL · ",
-  location: "Mendoza, Argentina",
-  instagramUrl: "https://www.instagram.com/",
-  instagramHandle: "@ornellaboschi.ph",
+  stampText: "SAN MARTÍN · MENDOZA · LUZ NATURAL · ",
+  location: "San Martín, Mendoza · Argentina",
+  instagramUrl: "https://www.instagram.com/ornellaboschifotografia/",
+  instagramHandle: "@ornellaboschifotografia",
+  email: "ornelitaboschi@gmail.com",
 
   // Tira collage de bienvenida debajo del header
   welcomeStrip: {
@@ -334,12 +336,12 @@ window.SITE_CONFIG = {
     // Carpeta local lista: img/sobre-mi/
     photo: {
       src: "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=900&q=80",
-      alt: "Cámara fotográfica bañada por la luz dorada del atardecer en Mendoza",
-      caption: "Mendoza · luz cálida & calma"
+      alt: "Cámara fotográfica bañada por la luz dorada del atardecer en San Martín, Mendoza",
+      caption: "San Martín, Mendoza · luz cálida"
     },
     paragraphs: [
       "Creo en una fotografía cercana, sin poses forzadas ni corridas: un rato tranquilo donde puedas relajarte, disfrutar y ser vos mismo mientras guardo esos gestos chiquitos que con los años valen oro.",
-      "Desde Mendoza acompaño los primeros días de tu bebé, tardes en familia, producciones de Vendimia, retratos personales y marcas creadas a pulmón. Si alguna foto te inspiró, escribime y armamos juntos tu sesión."
+      "Desde San Martín, Mendoza, acompaño los primeros días de tu bebé, tardes en familia, producciones de Vendimia, retratos personales y marcas creadas a pulmón. Si alguna foto te inspiró, escribime y armamos juntos tu sesión."
     ],
     signature: "Con amor, Orne",
     ctaText: "Escribime y charlamos tu idea",
