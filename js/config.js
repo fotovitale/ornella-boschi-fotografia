@@ -1,260 +1,358 @@
 /**
  * ============================================================================
- * CONFIGURACIÓN GENERAL DEL SITIO — ORNELLA BOSCHI · ESTUDIO DE FOTOGRAFÍA
+ * CONFIGURACIÓN CENTRALIZADA — ORNELLA BOSCHI · ESTUDIO DE FOTOGRAFÍA
  * ============================================================================
  *
- * ¿CÓMO EDITAR ESTE ARCHIVO CUANDO LA CLIENTA PASE SUS DATOS Y FOTOS?
- *
- * 1. NÚMERO DE WHATSAPP (`whatsappNumber`):
- *    Escribí el número completo con código de país (549 para celulares de
- *    Argentina) + código de área sin el 0 + número sin el 15.
- *    Sin signo "+", ni espacios, ni guiones.
- *    Ejemplo Mendoza: "5492634123456" o "5492615123456"
+ * GUÍA RÁPIDA DE EDICIÓN:
+ * 1. WHATSAPP (`whatsappNumber`):
+ *    Número completo con código de país (549 para Argentina) sin "+" ni espacios.
+ *    Ejemplo: "5492634123456"
  *
  * 2. FOTOS PROPIAS (`photos` en cada categoría y `about.photo`):
- *    Guardá las fotos optimizadas (.jpg o .webp) en su carpeta correspondiente
- *    dentro de `img/` y reemplazá la URL de prueba (`src`) por la ruta local:
- *      Ejemplo: src: "img/recien-nacidos/foto-01.jpg"
+ *    Guardá tus imágenes (.jpg / .webp) dentro de `img/<categoria>/` y cambiá
+ *    el valor de `src`, por ejemplo: "img/recien-nacidos/foto-01.jpg".
+ *    Cada categoría está pensada para lucirse con 6 fotos (o más).
  *
- * 3. MENSAJES DE WHATSAPP (`whatsappMessage`):
- *    Podés cambiar libremente cualquier frase, tilde o signo de exclamación;
- *    el sistema los codifica automáticamente para que lleguen impecables al chat.
+ * 3. CRÉDITO DE DESARROLLO (`developerCredit`):
+ *    Podés cambiar `url` por tu portfolio, web o perfil de Instagram cuando quieras.
  * ============================================================================
  */
 
 window.SITE_CONFIG = {
-  // Reemplazar por el número real de Ornella (formato internacional sin "+" ni espacios)
+  // Número de WhatsApp de Ornella (formato internacional sin "+" ni espacios)
   whatsappNumber: "5492634000000",
 
-  // Datos de marca y contacto para Header y Footer
+  // Identidad de marca
   studioName: "Ornella Boschi",
+  monogram: "OB",
   studioSubtitle: "Estudio de Fotografía",
+  stampText: "EST. MENDOZA · LUZ NATURAL · OFICIO ARTESANAL · ",
   location: "Mendoza, Argentina",
   instagramUrl: "https://www.instagram.com/",
   instagramHandle: "@ornellaboschi.ph",
 
-  // Mensaje del botón flotante general (esquina inferior derecha)
-  floatingWhatsappMessage:
-    "¡Hola Ornella! Estuve recorriendo tu página web y me gustaría hacerte una consulta sobre una sesión fotográfica.",
+  // Tira collage de bienvenida debajo del header
+  welcomeStrip: {
+    handwrittenTag: "capturando instantes reales"
+  },
+
+  // Pasos breves de "Cómo es tu sesión"
+  processSteps: [
+    {
+      number: "01",
+      title: "Elegís tu estilo",
+      text: "Recorré las galerías, marcá con ♥ tus fotos favoritas y contame qué idea soñás."
+    },
+    {
+      number: "02",
+      title: "Pensamos la luz y el lugar",
+      text: "Coordinamos vestuario, horarios cálidos y cada detalle sin apuros ni poses rígidas."
+    },
+    {
+      number: "03",
+      title: "Tus recuerdos para siempre",
+      text: "Recibís una selección curada y editada con calidez artesanal, lista para guardar."
+    }
+  ],
 
   // ==========================================================================
-  // CATEGORÍAS DE PORFOLIO (se renderizan en este mismo orden)
+  // 5 CATEGORÍAS CON PERSONALIDAD VISUAL PROPIA (6 fotos verificadas c/u = 30)
   // ==========================================================================
   categories: [
     {
       id: "recien-nacidos",
       navLabel: "Recién Nacidos",
+      shortLabel: "Recién Nacidos",
+      layout: "scrapbook-thumbs",
+      themeClass: "theme-paper",
+      eyebrow: "Primeros días",
       title: "Sesiones a nuestros Recién Nacidos",
-      subtitle: "Sus primeros días guardados con delicadeza, calma y luz natural.",
+      subtitle: "Sus primeros días guardados con delicadeza, calma y texturas suaves.",
       ctaText: "Consultar sesión de Recién Nacidos",
       whatsappMessage:
-        "¡Hola Ornella! Vi tu galería en la web y me encantaría consultar disponibilidad para una sesión de Recién Nacidos.",
-      themeClass: "theme-paper",
-      botanicalVariant: "olive-sprig",
-      // Carpeta preparada para tus fotos reales: img/recien-nacidos/
+        "¡Hola Orne! Vi tu galería de Recién Nacidos en la web y me encantaría consultar disponibilidad y cómo trabajan las sesiones.",
+      // Carpeta local lista: img/recien-nacidos/
       photos: [
         {
-          src: "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=80",
-          alt: "Bebé recién nacido durmiendo plácidamente envuelto en manta tejida cálida",
-          caption: "#reciénnacidos · primeros días",
-          tape: "beige"
+          src: "https://images.unsplash.com/photo-1773243086679-20c427d28092?auto=format&fit=crop&w=900&q=80",
+          alt: "Bebé recién nacido durmiendo en calma sobre manta tejida beige",
+          caption: "#primerosdías",
+          decor: "tape-beige"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1770831208183-92f98cf3845b?auto=format&fit=crop&w=900&q=80",
+          alt: "Manos de mamá y papá sosteniendo con ternura el piecito de su recién nacido",
+          caption: "#pielapiel",
+          decor: "paperclip"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1701839640980-032c6b88fc87?auto=format&fit=crop&w=900&q=80",
+          alt: "Primer plano cálido de bebé recién nacido descansando sobre tejido color crema",
+          caption: "#dulcecalma",
+          decor: "tape-sage"
         },
         {
           src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=900&q=80",
-          alt: "Detalle tierno de recién nacido descansando sobre textura suave color crema",
-          caption: "#calma · tan chiquito",
-          tape: "sage"
+          alt: "Piecitos pequeños de recién nacido asomando entre manta suave blanca",
+          caption: "#tanchiquito",
+          decor: "tape-blush"
         },
         {
-          src: "https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=900&q=80",
-          alt: "Manitos pequeñas de bebé recién nacido sostenidas con ternura",
-          caption: "#detalles · piel a piel",
-          tape: "blush"
+          src: "https://images.unsplash.com/photo-1552819289-e14fbbcea868?auto=format&fit=crop&w=900&q=80",
+          alt: "Detalle tierno de rostro y manito cerrada de recién nacido durmiendo",
+          caption: "#ternura",
+          decor: "paperclip"
         },
         {
-          src: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=80",
-          alt: "Retrato cálido e íntimo de recién nacido durmiendo en cuna artesanal",
-          caption: "#bienvenido · dulce espera",
-          tape: "beige"
+          src: "https://images.unsplash.com/photo-1544268211-ba72491bf350?auto=format&fit=crop&w=900&q=80",
+          alt: "Piecitos delicados de bebé recién nacido con luz natural suave",
+          caption: "#bienvenido",
+          decor: "tape-beige"
         }
       ]
     },
     {
       id: "familias",
       navLabel: "Familias",
+      shortLabel: "Familias",
+      layout: "collage-carousel",
+      themeClass: "theme-butter",
+      eyebrow: "Historias compartidas",
+      collageNote: "#abrazosreales",
       title: "Sesiones de Familia",
-      subtitle: "Abrazos reales y recuerdos espontáneos para volver siempre.",
+      subtitle: "Abrazos reales, juegos al sol y recuerdos espontáneos para volver siempre.",
       ctaText: "Reservar nuestra sesión de Familia",
       whatsappMessage:
-        "¡Hola Ornella! Me enamoré de las fotos de tu web y quisiera consultar por una sesión de Familia.",
-      themeClass: "theme-butter",
-      botanicalVariant: "mimosa",
-      // Carpeta preparada para tus fotos reales: img/familias/
+        "¡Hola Orne! Me enamoré de las fotos de Familia en tu web y quisiera consultar disponibilidad para hacer una sesión.",
+      // Carpeta local lista: img/familias/
       photos: [
         {
-          src: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80",
-          alt: "Familia abrazándose al aire libre durante el atardecer dorado",
-          caption: "#abrazosreales · atardecer",
-          tape: "sage"
+          src: "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=900&q=80",
+          alt: "Familia caminando de la mano en el campo con luz cálida de tarde",
+          caption: "#abrazosreales",
+          decor: "tape-sage"
         },
         {
           src: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=900&q=80",
-          alt: "Mamá, papá e hijos riendo juntos con luz cálida natural",
-          caption: "#enfamilia · risas",
-          tape: "beige"
+          alt: "Papá abrazando y riendo con sus hijos pequeños al aire libre",
+          caption: "#risas",
+          decor: "paperclip"
         },
         {
-          src: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?auto=format&fit=crop&w=900&q=80",
-          alt: "Madre alzando a su hijo pequeño en un entorno natural luminoso",
-          caption: "#conexión · crecer juntos",
-          tape: "blush"
+          src: "https://images.unsplash.com/photo-1484665754804-74b091211472?auto=format&fit=crop&w=900&q=80",
+          alt: "Mamá alzando en brazos a su hijo sonriente bajo el sol dorado",
+          caption: "#luzdetarde",
+          decor: "tape-blush"
         },
         {
-          src: "https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?auto=format&fit=crop&w=900&q=80",
-          alt: "Retrato espontáneo familiar caminando de la mano al sol",
-          caption: "#recuerdos · para siempre",
-          tape: "sage"
+          src: "https://images.unsplash.com/photo-1581952976147-5a2d15560349?auto=format&fit=crop&w=900&q=80",
+          alt: "Mamá y papá compartiendo un momento íntimo y cálido junto a su bebé",
+          caption: "#enfamilia",
+          decor: "tape-beige"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80",
+          alt: "Familia unida contemplando el atardecer dorado",
+          caption: "#atardecer",
+          decor: "paperclip"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1648221350871-e3ae3c8d0f58?auto=format&fit=crop&w=900&q=80",
+          alt: "Padres e hijos tomados de la mano a contraluz en la hora dorada",
+          caption: "#parasiempre",
+          decor: "tape-sage"
         }
       ]
     },
     {
       id: "reinas",
       navLabel: "Reinas de la Vendimia",
+      shortLabel: "Reinas de la Vendimia",
+      layout: "editorial-lookbook",
+      themeClass: "theme-espresso",
+      eyebrow: "Edición Editorial · Mendoza",
       title: "Reinas de la Vendimia",
-      subtitle: "Retratos editoriales que celebran tu esencia, tradición y presencia.",
+      subtitle: "Retratos de portada que celebran tu esencia, porte y tradición mendocina.",
       ctaText: "Consultar producción de Vendimia",
       whatsappMessage:
-        "¡Hola Ornella! Vi tus retratos de Reinas de la Vendimia en la web y quisiera consultar para realizar una producción.",
-      themeClass: "theme-blush",
-      botanicalVariant: "vine-leaf",
-      // Carpeta preparada para tus fotos reales: img/reinas/
+        "¡Hola Orne! Vi el lookbook de Reinas de la Vendimia en tu web y quisiera consultar para realizar una producción editorial.",
+      // Carpeta local lista: img/reinas/
       photos: [
         {
-          src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
-          alt: "Retrato editorial femenino elegante con iluminación cálida y mirada serena",
-          caption: "#vendimia · esencia real",
-          tape: "beige"
+          src: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80",
+          alt: "Retrato editorial de joven con vestido largo de gala en movimiento",
+          caption: "Porte de gala & movimiento · Edición Vendimia",
+          decor: "gold"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1526510747491-58f928ec870f?auto=format&fit=crop&w=900&q=80",
+          alt: "Retrato femenino editorial en tonos terracota cálidos y vestido delicado",
+          caption: "Luz dorada & mirada serena · Estudio",
+          decor: "gold"
         },
         {
           src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
-          alt: "Producción editorial de gala con luz suave y porte distinguido",
-          caption: "#reinas · mendoza",
-          tape: "blush"
+          alt: "Producción editorial sofisticada con iluminación cálida de revista",
+          caption: "Elegancia atemporal · Retrato oficial",
+          decor: "gold"
         },
         {
-          src: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80",
-          alt: "Mujer joven con vestido elegante posando en sesión editorial clásica",
-          caption: "#elegancia · gala",
-          tape: "sage"
+          src: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=900&q=80",
+          alt: "Primer plano editorial de belleza clásica en tonos cálidos y bronce",
+          caption: "Primer plano de autor · Presencia real",
+          decor: "gold"
         },
         {
           src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=900&q=80",
-          alt: "Primer plano artístico femenino destacando facciones y luz dorada",
-          caption: "#presencia · retrato editorial",
-          tape: "beige"
+          alt: "Retrato refinado con peinado recogido y delicada joyería dorada",
+          caption: "Sutileza & distinción · Luz suave",
+          decor: "gold"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
+          alt: "Detalle artístico de ramo floral y vestido iluminados por el sol de tarde",
+          caption: "Atardecer en Mendoza · Detalles que cuentan",
+          decor: "gold"
         }
       ]
     },
     {
       id: "personales",
       navLabel: "Personales",
+      shortLabel: "Sesiones Personales",
+      layout: "polaroid-deck",
+      themeClass: "theme-blush",
+      eyebrow: "Retratos con alma",
       title: "Sesiones Personales",
-      subtitle: "Un espacio relajado y genuino para retratarte tal cual sos.",
+      subtitle: "Un espacio relajado y auténtico para retratarte tal cual sos.",
       ctaText: "Quiero mi sesión Personal",
       whatsappMessage:
-        "¡Hola Ornella! Estuve viendo tu porfolio web y me gustaría consultar para hacer una sesión Personal.",
-      themeClass: "theme-sand",
-      botanicalVariant: "olive-sprig",
-      // Carpeta preparada para tus fotos reales: img/personales/
+        "¡Hola Orne! Estuve recorriendo el mazo de Sesiones Personales en tu web y me encantaría consultar para hacer mi sesión.",
+      // Carpeta local lista: img/personales/
       photos: [
         {
-          src: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=80",
-          alt: "Retrato personal natural de mujer sonriendo con luz suave de tarde",
-          caption: "#talcualsos · autenticidad",
-          tape: "sage"
-        },
-        {
           src: "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=900&q=80",
-          alt: "Sesión personal al aire libre con estética orgánica y cálida",
-          caption: "#luznatural · tu momento",
-          tape: "beige"
+          alt: "Mujer joven sonriendo espontáneamente entre rayos de sol de tarde",
+          caption: "#talcualsos",
+          decor: "tape-beige"
         },
         {
-          src: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=900&q=80",
-          alt: "Retrato artístico femenino con sombrero en entorno rústico soleado",
-          caption: "#espontánea · aire libre",
-          tape: "blush"
+          src: "https://images.unsplash.com/photo-1561375851-6afaa8fcb104?auto=format&fit=crop&w=900&q=80",
+          alt: "Retrato sereno con sombrero en un campo dorado al atardecer",
+          caption: "#horadorada",
+          decor: "paperclip"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1784633319408-a5509da8c4d8?auto=format&fit=crop&w=900&q=80",
+          alt: "Retrato personal en tonos tierra rodeada de flores silvestres",
+          caption: "#luznatural",
+          decor: "tape-sage"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?auto=format&fit=crop&w=900&q=80",
+          alt: "Retrato cálido con sombrero junto a puerta rústica de madera",
+          caption: "#esenciapropia",
+          decor: "tape-blush"
         },
         {
           src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80",
-          alt: "Primer plano cálido y relajado con luz natural envolvente",
-          caption: "#retratos · mirada propia",
-          tape: "beige"
+          alt: "Primer plano natural al aire libre con luz suave envolvente",
+          caption: "#miradareal",
+          decor: "paperclip"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=80",
+          alt: "Sonrisa luminosa y espontánea a contraluz durante el atardecer",
+          caption: "#espontánea",
+          decor: "tape-beige"
         }
       ]
     },
     {
       id: "productos",
       navLabel: "Productos",
+      shortLabel: "Fotografía de Productos",
+      layout: "boutique-mosaic",
+      themeClass: "theme-sage",
+      eyebrow: "Marcas & Emprendimientos",
       title: "Fotografía de Productos",
-      subtitle: "Imágenes cuidadas y orgánicas que muestran el alma de tu marca.",
+      subtitle: "Composiciones orgánicas, texturas y luz cuidada que muestran el alma de tu marca.",
       ctaText: "Consultar fotos para mi Marca",
       whatsappMessage:
-        "¡Hola Ornella! Vi tus trabajos de Fotografía de Productos en la web y quisiera consultar por una sesión para mi marca.",
-      themeClass: "theme-sage",
-      botanicalVariant: "mimosa",
-      // Carpeta preparada para tus fotos reales: img/productos/
+        "¡Hola Orne! Vi tu sección de Fotografía de Productos y quisiera consultar para retratar los productos de mi marca.",
+      // Carpeta local lista: img/productos/
       photos: [
         {
+          src: "https://images.unsplash.com/photo-1793100123538-396050d9f5c1?auto=format&fit=crop&w=900&q=80",
+          alt: "Frasco gotero ámbar sobre piedra natural con sombras cálidas de hojas",
+          caption: "#identidadvisual",
+          decor: "tape-beige"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=80",
+          alt: "Piezas de cerámica artesanal en gres y tonos crema",
+          caption: "#hechoamano",
+          decor: "paperclip"
+        },
+        {
+          src: "https://images.unsplash.com/photo-1793539267095-5798946eea27?auto=format&fit=crop&w=900&q=80",
+          alt: "Detalle estético de cosmética botánica y pipetas sobre fondo beige cálido",
+          caption: "#texturas",
+          decor: "tape-blush"
+        },
+        {
           src: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=80",
-          alt: "Fotografía estética de frascos botánicos y cosmética artesanal con sombras suaves",
-          caption: "#tumarca · identidad visual",
-          tape: "beige"
+          alt: "Botella ámbar sobre pedestal de madera con sombras orgánicas suaves",
+          caption: "#luzdeestudio",
+          decor: "tape-sage"
         },
         {
-          src: "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=900&q=80",
-          alt: "Vela artesanal y cerámica minimalista sobre lino cálido",
-          caption: "#hechoamano · texturas",
-          tape: "blush"
+          src: "https://images.unsplash.com/photo-1781344116880-029945a42b75?auto=format&fit=crop&w=900&q=80",
+          alt: "Presentación minimalista de envase artesanal sobre bloque de piedra",
+          caption: "#tumarca",
+          decor: "paperclip"
         },
         {
-          src: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=900&q=80",
-          alt: "Composición editorial de productos naturales en tonos tierra y crema",
-          caption: "#detalles · emprendedores",
-          tape: "sage"
-        },
-        {
-          src: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=900&q=80",
-          alt: "Presentación cuidada de producto de autor con iluminación de estudio natural",
-          caption: "#almaartesanal · catálogo",
-          tape: "beige"
+          src: "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=900&q=80",
+          alt: "Vela aromática artesanal encendida en atmósfera cálida e íntima",
+          caption: "#almaartesanal",
+          decor: "tape-beige"
         }
       ]
     }
   ],
 
   // ==========================================================================
-  // SECCIÓN "SOBRE MÍ" (se ubica al final del recorrido visual)
+  // SECCIÓN "SOBRE MÍ" (al final de la página)
   // ==========================================================================
   about: {
     id: "sobre-mi",
     navLabel: "Sobre mí",
-    eyebrow: "Detrás de la cámara",
+    eyebrow: "Detrás de cada historia",
     handwrittenNote: "Hola, soy Ornella...",
-    title: "Guardar lo simple, lo real y lo que emociona",
-    // Carpeta preparada para tu retrato real: img/sobre-mi/
+    title: "Fotografiar lo simple, lo sensible y lo verdadero",
+    // Carpeta local lista: img/sobre-mi/
     photo: {
       src: "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=900&q=80",
-      alt: "Ornella Boschi en su estudio sosteniendo su cámara fotográfica",
-      caption: "Mendoza · luz natural & calma"
+      alt: "Cámara fotográfica bañada por la luz dorada del atardecer en Mendoza",
+      caption: "Mendoza · luz cálida & calma"
     },
     paragraphs: [
-      "Creo en la fotografía que se siente como casa: sin poses rígidas ni apuros, cuidando cada detalle para que te sientas cómodo y disfrutes el momento tanto como el recuerdo que nos queda después.",
-      "Desde Mendoza acompaño los primeros días de tu bebé, abrazos en familia, sueños de Vendimia, retratos personales y proyectos hechos con amor. Contame qué tenés en mente y armamos juntos una sesión a tu medida."
+      "Creo en una fotografía cercana, sin poses forzadas ni corridas: un rato tranquilo donde puedas relajarte, disfrutar y ser vos mismo mientras guardo esos gestos chiquitos que con los años valen oro.",
+      "Desde Mendoza acompaño los primeros días de tu bebé, tardes en familia, producciones de Vendimia, retratos personales y marcas creadas a pulmón. Si alguna foto te inspiró, escribime y armamos juntos tu sesión."
     ],
-    signature: "Con cariño, Orne",
+    signature: "Con amor, Orne",
     ctaText: "Escribime y charlamos tu idea",
     whatsappMessage:
-      "¡Hola Ornella! Estuve viendo toda tu web y me encantaría contarte mi idea para coordinar una sesión."
+      "¡Hola Orne! Estuve recorriendo tu página web y me encantaría contarte mi idea para coordinar una sesión."
+  },
+
+  // ==========================================================================
+  // CRÉDITO DE DESARROLLO WEB (última línea del footer)
+  // ==========================================================================
+  developerCredit: {
+    prefix: "Diseño y desarrollo web por ",
+    label: "VM Vitale Martínez / Desarrollo Web",
+    url: "https://fotovitale.github.io/desarrollo-web/"
   }
 };

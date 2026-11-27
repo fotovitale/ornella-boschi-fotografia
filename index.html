@@ -7,30 +7,30 @@
   <title>Ornella Boschi | Estudio de Fotografía · Mendoza</title>
   <meta
     name="description"
-    content="Porfolio y estudio de fotografía de Ornella Boschi en Mendoza, Argentina. Sesiones de recién nacidos, familias, Reinas de la Vendimia, retratos personales y fotografía de productos."
+    content="Estudio de fotografía de autor de Ornella Boschi en Mendoza, Argentina. Recién nacidos, familias, Reinas de la Vendimia, retratos personales y fotografía de productos."
   />
 
-  <!-- Vista previa al compartir por WhatsApp / Instagram -->
+  <!-- Open Graph para compartir en WhatsApp e Instagram -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_AR" />
   <meta property="og:title" content="Ornella Boschi · Estudio de Fotografía" />
   <meta
     property="og:description"
-    content="Fotografía cálida, natural y artesanal en Mendoza. Recorré las galerías y consultá tu sesión por WhatsApp."
+    content="Fotografía cálida, sensible y artesanal en Mendoza. Elegí tus fotos favoritas y consultá tu sesión por WhatsApp."
   />
   <meta
     property="og:image"
-    content="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80"
+    content="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=900&q=80"
   />
 
-  <!-- Favicon minimalista artesanal en SVG -->
+  <!-- Favicon artesanal en SVG -->
   <link
     rel="icon"
     type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FAF6EE'/%3E%3Crect x='12' y='18' width='40' height='30' rx='6' fill='none' stroke='%23B67B5B' stroke-width='3'/%3E%3Ccircle cx='32' cy='33' r='8' fill='none' stroke='%236F7A5B' stroke-width='3'/%3E%3Ccircle cx='44' cy='25' r='2' fill='%23B67B5B'/%3E%3C/svg%3E"
   />
 
-  <!-- Tipografías editoriales y artesanales -->
+  <!-- Google Fonts: Cormorant Garamond + Caveat + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -41,16 +41,16 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Cabecera compacta, limpia y editorial -->
-  <header class="site-header" id="inicio">
-    <div class="header-inner">
-      <div class="header-ornament" aria-hidden="true">
-        <svg viewBox="0 0 120 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 11C34 11 45 11 53 11" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
-          <path d="M67 11C75 11 86 11 108 11" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" opacity="0.5"/>
-          <path d="M60 4C62.2 7.2 62.2 14.8 60 18C57.8 14.8 57.8 7.2 60 4Z" stroke="currentColor" stroke-width="1" fill="none"/>
-          <path d="M54 11C56.5 9.2 58.5 9.5 60 11C58.5 12.5 56.5 12.8 54 11Z" stroke="currentColor" stroke-width="0.9" fill="none"/>
-          <path d="M66 11C63.5 9.2 61.5 9.5 60 11C61.5 12.5 63.5 12.8 66 11Z" stroke="currentColor" stroke-width="0.9" fill="none"/>
+  <!-- 1A. Encabezado editorial completo arriba del todo (se desplaza naturalmente al bajar) -->
+  <header class="masthead" id="inicio">
+    <div class="masthead__inner">
+      <div class="masthead__ornament" aria-hidden="true">
+        <svg viewBox="0 0 132 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 11H52" stroke="currentColor" stroke-width="0.85" stroke-linecap="round" opacity="0.45"/>
+          <path d="M80 11H122" stroke="currentColor" stroke-width="0.85" stroke-linecap="round" opacity="0.45"/>
+          <path d="M66 3.5C68.5 7 68.5 15 66 18.5C63.5 15 63.5 7 66 3.5Z" stroke="currentColor" stroke-width="1"/>
+          <path d="M58.5 11C61.2 9 63.8 9.4 66 11C63.8 12.6 61.2 13 58.5 11Z" stroke="currentColor" stroke-width="0.9"/>
+          <path d="M73.5 11C70.8 9 68.2 9.4 66 11C68.2 12.6 70.8 13 73.5 11Z" stroke="currentColor" stroke-width="0.9"/>
         </svg>
       </div>
 
@@ -62,10 +62,15 @@
         <span class="brand-divider" aria-hidden="true"></span>
       </div>
     </div>
+  </header>
 
-    <!-- Barra deslizable de acceso rápido a cada galería -->
-    <nav class="category-nav" aria-label="Secciones del porfolio">
-      <div class="category-nav__inner" id="category-nav-list">
+  <!-- 1B. Barra pegajosa inteligente (~52px al bajar): muestra monograma OB + píldoras -->
+  <nav class="sticky-nav" id="sticky-nav" aria-label="Secciones del porfolio">
+    <div class="sticky-nav__inner">
+      <a href="#inicio" class="sticky-monogram" id="sticky-monogram" aria-label="Volver arriba · Ornella Boschi">
+        OB
+      </a>
+      <div class="category-nav__track" id="category-nav-list">
         <a class="nav-pill is-active" href="#recien-nacidos">Recién Nacidos</a>
         <a class="nav-pill" href="#familias">Familias</a>
         <a class="nav-pill" href="#reinas">Reinas de la Vendimia</a>
@@ -73,29 +78,61 @@
         <a class="nav-pill" href="#productos">Productos</a>
         <a class="nav-pill" href="#sobre-mi">Sobre mí</a>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <!-- Contenido principal: 5 bloques de carruseles + carta Sobre mí al final -->
   <main id="main-content">
+    <!-- 0. Tira Collage de Bienvenida (marquee suave, pausable al tocar) -->
+    <section class="welcome-strip" aria-label="Muestra rápida de fotografías">
+      <div class="welcome-strip__viewport" id="welcome-marquee">
+        <div class="welcome-strip__track" id="welcome-track"></div>
+      </div>
+      <div class="welcome-strip__tag-wrap">
+        <span class="welcome-strip__tag" id="welcome-tag">capturando instantes reales</span>
+      </div>
+    </section>
+
+    <!-- 1 a 5. Cinco secciones editoriales diferenciadas renderizadas desde js/config.js -->
     <div id="categories-container">
       <noscript>
         <p class="noscript-msg">
-          Activá JavaScript en tu navegador para recorrer las galerías de fotos de Ornella Boschi.
+          Activá JavaScript en tu navegador para recorrer las galerías interactivas de Ornella Boschi.
         </p>
       </noscript>
     </div>
 
-    <!-- Sección "Sobre mí" ubicada al final de la página -->
-    <section id="sobre-mi" class="about-section" aria-labelledby="about-title">
+    <!-- 6. Bloque ultracompacto "Cómo es tu sesión" -->
+    <section class="process-section" aria-labelledby="process-heading">
       <div class="section-container">
-        <div class="about-card" id="about-root"></div>
+        <header class="process-header" data-reveal>
+          <span class="section-eyebrow">Simple y sin apuros</span>
+          <h2 class="process-title" id="process-heading">¿Cómo es tu sesión?</h2>
+        </header>
+        <div class="process-grid" id="process-root"></div>
+      </div>
+    </section>
+
+    <!-- 7. Sección "Sobre mí" al final de la página -->
+    <section id="sobre-mi" class="about-section" aria-labelledby="about-title">
+      <div class="torn-divider torn-divider--top" aria-hidden="true">
+        <svg viewBox="0 0 1200 28" preserveAspectRatio="none">
+          <path d="M0,0 L1200,0 L1200,14 L1162,19 L1118,12 L1075,21 L1024,15 L978,22 L930,13 L882,20 L835,14 L786,23 L735,15 L688,21 L640,12 L592,20 L542,14 L495,22 L444,13 L396,21 L348,15 L298,22 L248,13 L198,20 L148,14 L98,22 L48,15 L0,20 Z" fill="#FAF6EE"></path>
+        </svg>
+      </div>
+      <div class="section-container">
+        <div class="about-card" id="about-root" data-reveal></div>
       </div>
     </section>
   </main>
 
-  <!-- Footer minimalista y cálido -->
+  <!-- Footer minimalista + crédito discreto de desarrollo -->
   <footer class="site-footer">
+    <div class="torn-divider torn-divider--top" aria-hidden="true">
+      <svg viewBox="0 0 1200 26" preserveAspectRatio="none">
+        <path d="M0,0 L1200,0 L1200,15 L1150,21 L1098,13 L1045,20 L992,14 L940,22 L885,13 L832,19 L778,13 L724,21 L670,14 L615,22 L560,13 L505,20 L450,14 L395,21 L340,13 L285,20 L230,14 L175,21 L120,13 L65,19 L0,14 Z" fill="#F5EFE4"></path>
+      </svg>
+    </div>
+
     <div class="footer-inner">
       <div class="footer-botanical" aria-hidden="true">
         <svg viewBox="0 0 84 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,26 +184,45 @@
       <p class="footer-copy">
         © <span id="footer-year">2026</span> Ornella Boschi · Todos los derechos reservados
       </p>
+
+      <div class="footer-dev" id="footer-dev">
+        <span>Diseño y desarrollo web por </span>
+        <a
+          id="footer-dev-link"
+          href="https://fotovitale.github.io/desarrollo-web/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >VM Vitale Martínez / Desarrollo Web</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Botón flotante discreto de WhatsApp en tonos salvia/oliva -->
-  <a
-    id="floating-whatsapp"
-    class="floating-wa"
-    href="#"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Escribir por WhatsApp a Ornella Boschi"
-    title="Consultar por WhatsApp"
-  >
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.2A8.5 8.5 0 1 1 20.5 11.8z"></path>
-      <path d="M9.4 8.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .6l-.4.6c-.1.2-.2.3 0 .6.3.5.8 1.1 1.4 1.5.6.4 1.1.5 1.3.6.2.1.4 0 .5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1-.7 1.4-.5.4-1.2.5-1.9.3-1.4-.4-2.9-1.3-4.1-2.6-1-1.1-1.7-2.4-1.9-3.5-.1-.7.1-1.3.3-1.4z"></path>
-    </svg>
-  </a>
+  <!-- Barra Flotante de Inspiración / Favoritos (aparece solo al elegir ♥ fotos) -->
+  <div class="favorites-bar" id="favorites-bar" aria-live="polite" hidden>
+    <a
+      id="favorites-wa-link"
+      class="favorites-bar__cta"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="favorites-bar__heart" aria-hidden="true">♥</span>
+      <span class="favorites-bar__text" id="favorites-bar-text">1 foto elegida · Consultar por WhatsApp</span>
+    </a>
+    <button
+      type="button"
+      class="favorites-bar__clear"
+      id="favorites-clear"
+      aria-label="Limpiar fotos elegidas"
+      title="Limpiar selección"
+    >
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M6 6l12 12M18 6L6 18"></path>
+      </svg>
+    </button>
+  </div>
 
-  <!-- Lightbox a pantalla completa para ver cada foto en detalle -->
+  <!-- Lightbox Editorial Mejorado (swipe, favoritos ♥ y CTA directo de estilo) -->
   <div
     id="lightbox"
     class="lightbox"
@@ -182,16 +238,29 @@
         <span class="lightbox__category" id="lightbox-category"></span>
         <span class="lightbox__counter" id="lightbox-counter"></span>
       </div>
-      <button
-        type="button"
-        class="lightbox__close"
-        id="lightbox-close"
-        aria-label="Cerrar imagen ampliada"
-      >
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-          <path d="M6 6l12 12M18 6L6 18"></path>
-        </svg>
-      </button>
+      <div class="lightbox__actions">
+        <button
+          type="button"
+          class="lightbox__fav"
+          id="lightbox-fav"
+          aria-label="Guardar esta foto como inspiración"
+          aria-pressed="false"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="lightbox__close"
+          id="lightbox-close"
+          aria-label="Cerrar imagen ampliada"
+        >
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div class="lightbox__stage" id="lightbox-stage">
@@ -223,6 +292,22 @@
           <path d="M9 18l6-6-6-6"></path>
         </svg>
       </button>
+    </div>
+
+    <div class="lightbox__bottombar">
+      <a
+        id="lightbox-wa-cta"
+        class="lightbox__wa-btn"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.4-4.2A8.5 8.5 0 1 1 20.5 11.8z"></path>
+          <path d="M9.4 8.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .6l-.4.6c-.1.2-.2.3 0 .6.3.5.8 1.1 1.4 1.5.6.4 1.1.5 1.3.6.2.1.4 0 .5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1-.7 1.4-.5.4-1.2.5-1.9.3-1.4-.4-2.9-1.3-4.1-2.6-1-1.1-1.7-2.4-1.9-3.5-.1-.7.1-1.3.3-1.4z"></path>
+        </svg>
+        <span>Quiero una sesión con este estilo</span>
+      </a>
     </div>
   </div>
 
