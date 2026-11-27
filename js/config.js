@@ -178,42 +178,42 @@ window.SITE_CONFIG = {
       ctaText: "Consultar producción de Vendimia",
       whatsappMessage:
         "¡Hola Orne! Vi el lookbook de Reinas de la Vendimia en tu web y quisiera consultar para realizar una producción editorial.",
-      // Carpeta local lista: img/reinas/
+      // Fotos reales locales de Reinas de la Vendimia de Mendoza en img/reinas/
       photos: [
         {
-          src: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80",
-          alt: "Retrato editorial de joven con vestido largo de gala en movimiento",
-          caption: "Porte de gala & movimiento · Edición Vendimia",
+          src: "img/reinas/reina-01.jpg",
+          alt: "Retrato oficial de Reina Nacional de la Vendimia de Mendoza con corona, capa bordada, banda y cetro",
+          caption: "Corona, capa y cetro · Retrato oficial",
           decor: "gold"
         },
         {
-          src: "https://images.unsplash.com/photo-1526510747491-58f928ec870f?auto=format&fit=crop&w=900&q=80",
-          alt: "Retrato femenino editorial en tonos terracota cálidos y vestido delicado",
-          caption: "Luz dorada & mirada serena · Estudio",
+          src: "img/reinas/reina-02.jpg",
+          alt: "Retrato de estudio de Virreina Nacional de la Vendimia con atributos reales mendocinos",
+          caption: "Atributos vendimiales · Estudio",
           decor: "gold"
         },
         {
-          src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
-          alt: "Producción editorial sofisticada con iluminación cálida de revista",
-          caption: "Elegancia atemporal · Retrato oficial",
+          src: "img/reinas/reina-03.jpg",
+          alt: "Reina y Virreina Nacional de la Vendimia luciendo sus bandas oficiales bajo el sol mendocino",
+          caption: "Soberanas Nacionales · Mendoza",
           decor: "gold"
         },
         {
-          src: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=900&q=80",
-          alt: "Primer plano editorial de belleza clásica en tonos cálidos y bronce",
-          caption: "Primer plano de autor · Presencia real",
+          src: "img/reinas/reina-04.jpg",
+          alt: "Coronación y saludo real con corona, capa y banda en la Fiesta Nacional de la Vendimia",
+          caption: "Noche de coronación · Frank Romero Day",
           decor: "gold"
         },
         {
-          src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=900&q=80",
-          alt: "Retrato refinado con peinado recogido y delicada joyería dorada",
-          caption: "Sutileza & distinción · Luz suave",
+          src: "img/reinas/reina-05.jpg",
+          alt: "Reina departamental de la Vendimia saludando con su corona y banda durante el desfile",
+          caption: "Carrusel de las Reinas · Tradición",
           decor: "gold"
         },
         {
-          src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
-          alt: "Detalle artístico de ramo floral y vestido iluminados por el sol de tarde",
-          caption: "Atardecer en Mendoza · Detalles que cuentan",
+          src: "img/reinas/reina-06.jpg",
+          alt: "Soberana departamental con corona, banda y canasto de cosecha en carro vendimial",
+          caption: "Vía Blanca & Cosecha · Vendimia",
           decor: "gold"
         }
       ]
@@ -353,8 +353,8 @@ window.SITE_CONFIG = {
   // CRÉDITO DE DESARROLLO WEB (última línea del footer)
   // ==========================================================================
   developerCredit: {
-    prefix: "Diseño y desarrollo web por ",
-    label: "VM Vitale Martínez / Desarrollo Web",
+    prefix: "Diseño y desarrollo web por",
+    label: "Vitale Martínez | Desarrollo Web",
     url: "https://fotovitale.github.io/desarrollo-web/"
   }
 };

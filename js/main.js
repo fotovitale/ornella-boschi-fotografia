@@ -317,7 +317,7 @@
     if (footerYear) footerYear.textContent = String(new Date().getFullYear());
 
     if (devWrap && config.developerCredit) {
-      devWrap.innerHTML = `<span>${escapeHtml(config.developerCredit.prefix || "Diseño y desarrollo web por ")}</span><a href="${escapeHtml(config.developerCredit.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.developerCredit.label)}</a>`;
+      devWrap.innerHTML = `<span class="footer-dev__prefix">${escapeHtml(config.developerCredit.prefix || "Diseño y desarrollo web por")}</span><a href="${escapeHtml(config.developerCredit.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.developerCredit.label)}</a>`;
     }
   }
 
